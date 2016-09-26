@@ -1,0 +1,13 @@
+[Unit]
+Description=EC2 Metadata Service
+Requires=ec2-metadata.socket
+After=syslog.target network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/share/systemd-ec2-metadata/ec2-metadata.sh
+StandardInput=socket
+
+[Install]
+WantedBy=multi-user.target
+Also=ec2-metadata.socket

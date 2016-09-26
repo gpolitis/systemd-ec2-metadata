@@ -1,0 +1,11 @@
+[Unit]
+Description=EC2 Metadata Socket
+
+[Socket]
+ListenStream=169.254.169.254:80
+Backlog=1
+MaxConnections=3
+Accept=yes
+
+[Install]
+WantedBy=sockets.target
