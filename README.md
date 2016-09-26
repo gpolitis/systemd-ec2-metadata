@@ -5,7 +5,9 @@ purpose-specific EC2 metadata service.
 
 The context is to be able to run the [Jitsi
 Videobridge](https://github.com/jitsi/jitsi-videobridge) inside a container
-that's not assigned a public IP.
+that's not assigned a public IP. The EC2 service is running on the host and
+it's being queried by the container thourgh standard routing without any
+additional configuration.
 
 # How it works
 
